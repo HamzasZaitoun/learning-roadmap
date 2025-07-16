@@ -1,0 +1,75 @@
+name: 📘 Daily Learning Log
+description: Log your daily progress, challenges, and reflections
+title: "[Log] Week X - Day Y: Topic"
+labels: [daily-log]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: dropdown
+    id: week
+    attributes:
+      label: 📦 Week Number
+      options:
+        - Week 01
+        - Week 02
+        - Week 03
+        - Week 04
+        - Week 05
+        - Week 06
+        - Week 07
+        - Week 08
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: 🎯 What was today's goal?
+      description: Write your daily target (e.g., "Set up Git & Java", "Practice OOP basics")
+      placeholder: Describe what you intended to accomplish today.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pomodoros
+    attributes:
+      label: ✅ Pomodoro Tracker
+      description: Mark off the completed work sessions
+      options:
+        - label: 🍅 Pomodoro 1
+        - label: 🍅 Pomodoro 2
+        - label: 🍅 Pomodoro 3
+        - label: 🍅 Pomodoro 4
+
+  - type: textarea
+    id: blockers
+    attributes:
+      label: 🚧 Blockers or Confusions
+      description: What did you struggle with today?
+      placeholder: Mention any bugs, confusing concepts, or errors.
+    validations:
+      required: false
+
+  - type: textarea
+    id: reflections
+    attributes:
+      label: 🔍 End-of-Day Reflection
+      description: What did you learn? Any new ideas or habits?
+      placeholder: Summarize your learning and thoughts here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 🧠 Notes / Resources Used
+      description: Add any relevant links, docs, videos, or notes you referred to.
+    validations:
+      required: false
