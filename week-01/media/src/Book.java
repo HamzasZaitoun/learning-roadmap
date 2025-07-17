@@ -1,4 +1,4 @@
-public class Book extends Media {
+public class Book extends Media implements Printable {
 
     private  int pageCount;
 
@@ -19,4 +19,14 @@ public class Book extends Media {
         return pageCount;
     }
 
+    @Override
+    public void display()
+    {
+        System.out.println("title: " + getTitle() + " author: " + getAuthor() + " number of pages:  " + getPageCount());
+    }
+    public void print()
+    {
+        System.out.println("printing from Book class");
+    }
 }
+

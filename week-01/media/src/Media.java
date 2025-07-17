@@ -1,4 +1,4 @@
-public class Media {
+public abstract class Media {
     private String title;
     private String author;
 
@@ -24,4 +24,5 @@ public class Media {
         return author;
     }
 
+    public abstract void display();
 }

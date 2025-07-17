@@ -1,4 +1,4 @@
-public class Ebook extends Media{
+public class Ebook extends Media implements Printable{
 
     private int fileSize;
 
@@ -16,5 +16,16 @@ public class Ebook extends Media{
     public int getFileSize()
     {
         return fileSize;
+    }
+
+    @Override
+    public void display()
+    {
+        System.out.println("title: " + getTitle() + " author: " + getAuthor() + " file size:  " + getFileSize());
+    }
+
+    public void print()
+    {
+        System.out.println("printing from Ebook class");
     }
 }
