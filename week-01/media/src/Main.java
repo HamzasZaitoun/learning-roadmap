@@ -3,18 +3,23 @@
 public class Main {
     public static void main(String[] args) {
 
-//        List<Media> library = List.of(new Book("wonderland","Hazem",234),new Ebook("Fantastic four","Marvel",3423));
-//        for (Media media : library)
-//        {
-//            if (media instanceof Printable printable) {
-//                printable.print();
-//            }
-//            media.display();
-//        }
+////        List<Media> library = List.of(new Book("wonderland","Hazem",234),new Ebook("Fantastic four","Marvel",3423));
+////        for (Media media : library)
+////        {
+////            if (media instanceof Printable printable) {
+////                printable.print();
+////            }
+////            media.display();
+////        }
+//
+//        var recursion = new Recursion();
+//
+//        System.out.println(recursion.fibonacci(4));
 
-        var recursion = new Recursion();
-
-        System.out.println(recursion.fibonacci(4));
+        var myArrayList= new CustomCollection<Media> (2);
+        myArrayList.add(new Ebook("wonderland","Hamza",213));
+        myArrayList.add(new Ebook("wonderland","Hamza",213));
+        System.out.println(myArrayList.get(1));
 
     }
 }
