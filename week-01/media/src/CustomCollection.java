@@ -8,7 +8,7 @@ public class CustomCollection<T> {
 
         collection=(T[]) new Object[size];
     }
-
+  
 
     // big O(1)
     public void add(T book)
