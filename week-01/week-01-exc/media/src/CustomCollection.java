@@ -1,11 +1,15 @@
+import java.util.concurrent.LinkedBlockingDeque;
+
 public class CustomCollection<T> {
     private  T collection[];
     private int  count = 0;
-
+    private int size;
 
     @SuppressWarnings("unchecked")
     public CustomCollection(int size){
 
+
+        this.size=size;
         collection=(T[]) new Object[size];
     }
   
@@ -28,11 +32,21 @@ public class CustomCollection<T> {
         return collection[index];
     }
 
-    @Override
-    public String toString()
+    public void remove(int index)
     {
-        if (Book.class||Ebook.class)
-            return
+        if(index<0 || index>=size)
+            throw new IndexOutOfBoundsException("the index you want to remove is out of bound!");
+
+        for (int i=index;i<size-1; i++)
+        {
+
+
+            collection[i] = collection[i + 1];
+        }
+        collection[size-1]=null;
+        size-=1;
     }
+
+
 
 }

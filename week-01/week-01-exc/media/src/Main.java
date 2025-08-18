@@ -1,3 +1,7 @@
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -20,6 +24,7 @@ public class Main {
         myArrayList.add(new Ebook("wonderland","Hamza",213));
         myArrayList.add(new Ebook("wonderland","Hamza",213));
         System.out.println(myArrayList.get(1));
+        myArrayList.remove(1);
 
     }
 }

@@ -7,6 +7,7 @@ public class SetDemo {
     public static void show()
     {
         Set<String> set = new HashSet<>();
+
         set.add("A");
         set.add("A");
         set.add("A");

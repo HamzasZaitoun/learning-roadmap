@@ -1,0 +1,7 @@
+1- readable 
+2- scalable :code that can handle increasing amounts of data, traffic, or complexity without compromising performance, reliability, or maintainability
+
+- runtime: how long function needs to run
+- big o is the language we use to talk about how long algorithm is taking to run
+
+
