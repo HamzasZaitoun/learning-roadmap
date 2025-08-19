@@ -7,6 +7,7 @@ import collections.MapDemo;
 import collections.SetDemo;
 import exceptions.Account;
 import exceptions.exceptionDemo;
+import lambdas.LambasDemo;
 
 import java.io.IOException;
 
@@ -26,7 +27,7 @@ public class Main {
 //        }
 
 
-        MapDemo.show();
+        LambasDemo.show();
 
 
     }

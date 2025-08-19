@@ -26,13 +26,15 @@ public class Main {
 
             inv.loadFromJson(data);
             inv.addBook(new Book("Clean Code", "Robert Martin", 464));
-            inv.addBook(new Book("Clean Cewode", "Robert Martin", 464));
-            inv.addBook(new Book("Clean Coewde", "Robert Martin", 464));
+            inv.addBook(new Book("x Cewode", "Robert Martin", 464));
+            inv.addBook(new Book("x Coewde", "Robert Martin", 464));
             inv.listBooks();
             inv.saveToJson(data);
+            System.out.println(inv.searchBook("clean"));
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+
 
     }
 }
