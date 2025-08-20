@@ -8,6 +8,7 @@ import collections.SetDemo;
 import exceptions.Account;
 import exceptions.exceptionDemo;
 import lambdas.LambasDemo;
+import streams.StreamsDemo;
 
 import java.io.IOException;
 
@@ -27,7 +28,7 @@ public class Main {
 //        }
 
 
-        LambasDemo.show();
+        StreamsDemo.show();
 
 
     }
