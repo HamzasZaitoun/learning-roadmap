@@ -1,21 +1,27 @@
 package streams;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class  StreamsDemo {
 
     public static void show()
     {
-        List<Movie>movies = List.of(new Movie("a",10),new Movie("b",15),new Movie("c",20));
+        List<Movie>movies = List.of
+                (new Movie("b",10,Genre.ACTION),
+                new Movie("c",15,Genre.COMEDY),
+                new Movie("a",220,Genre.ACTION));
 
-        movies.stream()
-                .limit(2)
-                .skip(1)
-                .limit(0)
-                .takeWhile(m->m.getLikes()>15) // the moment condition becomes false, it stops!
-                .dropWhile(m->m.getLikes()<15)
-                .forEach(m-> System.out.println(m.getTitle()));
+        /// [10.20.30]
+        /// [30,30]
+        /// [60]
+        IntStream.rangeClosed(1,5)
+                        .forEach(System.out::println);
+
     }
 }
 
