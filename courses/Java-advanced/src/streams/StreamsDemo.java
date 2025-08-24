@@ -22,6 +22,8 @@ public class  StreamsDemo {
         IntStream.rangeClosed(1,5)
                         .forEach(System.out::println);
 
+        
+
     }
 }
 
