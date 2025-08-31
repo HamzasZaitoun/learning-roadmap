@@ -20,13 +20,14 @@ public class Main {
     public static void main(String[] args) {
 
 
-        var service = new MailService();
-        service.sendAsync();
-        System.out.println("hello world");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        var service = new MailService();
+//        service.sendAsync();
+//        System.out.println("hello world");
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        CompletableFutureDemo.show();
     }
 }
