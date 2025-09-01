@@ -1,8 +1,11 @@
 package executors;
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 public class CompletableFutureDemo {
    public static int toFahrenheit(int celsius)
@@ -116,11 +119,11 @@ public static void show()
 
     // handling timeouts
 
-    var future= CompletableFuture.supplyAsync(()->
-    {
-        LongTask.simulate();
-        return 1;
-    });
+//    var future= CompletableFuture.supplyAsync(()->
+//    {
+//        LongTask.simulate();
+//        return 1;
+//    });
 //    try {
 //        var result = future.orTimeout(1, TimeUnit.SECONDS)
 //                .get();
@@ -141,10 +144,19 @@ public static void show()
 //        throw new RuntimeException(e);
 //    }
 
-
+var start = LocalTime.now();
     var service = new FlightService();
-    service.getQuote("site1")
-            .thenAccept(System.out::println);
+  var futures =   service.getQuotes()
+            .map(future->future.thenAccept(System.out::println))
+            .collect(Collectors.toList());
+  CompletableFuture
+          .allOf(futures.toArray(new CompletableFuture[0]))
+          .thenRun(()->
+          {
+    var end = LocalTime.now();
+              var duration = Duration.between(start,end);
+              System.out.println("retrieved all quotes in "+duration.toMillis()+" msec.");
+          });
     try {
         Thread.sleep(10_000);
     } catch (InterruptedException e) {
