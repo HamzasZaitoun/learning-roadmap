@@ -1,0 +1,69 @@
+Primitive types → simple types (int, float, byte, char, boolean, etc.)
+
+Wrapper types → allow storing primitives as objects (Integer, Double, etc.)
+
+Useful for collections, generics, and null values
+
+== → compares value for primitives, reference for objects
+
+.equals() → compares content of objects (must be overridden in custom classes)
+
+var → type inference, makes code cleaner, works only for local variables
+
+Autoboxing → primitive → wrapper (e.g., int → Integer)
+
+Unboxing → wrapper → primitive (e.g., Integer → int)
+
+Unboxing issue → if wrapper is null → NullPointerException
+
+Casting:
+
+Implicit (widening) → smaller → larger (e.g., int → double)
+
+Explicit (narrowing) → larger → smaller (e.g., double → int)
+
+Integer caching → values between -128 and 127 are reused (same reference).
+
+///////////////////////////////////////////////
+////////////////////////
+///////////////////////////////////////////////
+
+Control flow → determines how a program executes instructions.
+
+Sequential flow → default, executes statements line by line.
+
+Conditional statements:
+
+if / else if / else → executes code blocks based on conditions.
+
+switch → alternative to multiple if statements.
+
+Classic switch → uses case and break.
+
+Enhanced switch (Java 14+) → uses ->, supports returning values directly.
+
+Ternary operator (?:) → shorthand for simple conditions.
+
+Loops (Iteration):
+
+for → repeats code for a fixed number of iterations.
+
+while → repeats while a condition is true (checked before loop).
+
+do-while → always executes once, then checks the condition.
+
+Enhanced for (for-each) → used to loop through arrays and collections.
+
+Branching statements:
+
+break → exits loop or switch entirely.
+
+continue → skips the rest of the current iteration.
+
+return → exits the current method immediately.
+
+labeled break / continue → used to break or continue outer loops in nested structures.
+
+Advanced concepts:
+
+Streams (Java 8+) → modern, functional way to iterate through collections.
