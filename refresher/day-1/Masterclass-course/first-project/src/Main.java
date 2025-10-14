@@ -97,33 +97,51 @@ public class Main {
 
 
         //Scanner
-        Scanner in = new Scanner(System.in);
-//        int num = in.nextInt();
-
-
-        String userName="Hamza";
-        String password= "123";
-
-        System.out.println("enter user name: ");
-        String user = in.next();
-        System.out.println("enter password: " );
-        String pass = in.next();
-        Thread.sleep(2000);
-        if(user.equals(userName) && pass.equals(password))
-        {
-            System.out.println("welcome back...");;
-
-        }
-        else
-        {
-            System.out.println("the username or password are invalid");
-        }
+//        Scanner in = new Scanner(System.in);
+////        int num = in.nextInt();
+//
+//
+//        String userName="Hamza";
+//        String password= "123";
+//
+//        System.out.println("enter user name: ");
+//        String user = in.next();
+//        System.out.println("enter password: " );
+//        String pass = in.next();
+//        Thread.sleep(2000);
+//        if(user.equals(userName) && pass.equals(password))
+//        {
+//            System.out.println("welcome back...");;
+//
+//        }
+//        else
+//        {
+//            System.out.println("the username or password are invalid");
+//        }
 
 
 
 
         boolean x2 = 5>3 ? true : false;
 
+
+        // loops
+        String namex = "Java Mastery";
+        for (int i = namex.length()-1; i >= 0 ; i--)
+        {
+            System.out.print(namex.charAt(i));
+        }
+        System.out.println("");
+
+
+
+        mainForLoop:for (int i = 5; i > 0; i--) {
+            for (int j = i; j > 0; j--) {
+                System.out.print("*");
+                break mainForLoop;
+            }
+            System.out.println("");
+        }
 
     }
 }
