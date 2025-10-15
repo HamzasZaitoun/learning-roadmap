@@ -1,0 +1,9 @@
+- Finalizer: a special method in Java that are called by the garbage collector before an object is removed from memory, and its defined in the Object Class.
+- POJO: a class that has getters and setters without having any other behaviour.
+
+* nested class types:
+ - static class
+ - inner class
+ - local class
+ - anonymous class
+  
