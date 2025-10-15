@@ -6,4 +6,3 @@
  - inner class
  - local class
  - anonymous class
-  
