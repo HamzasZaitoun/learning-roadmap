@@ -31,11 +31,14 @@ public class Main {
 //        User user = new User("Hamza","Hamza@gail.com","079252525",new String[]{"Amman, Jordan","Salalah, Oman"} );
 //        System.out.println(user);
 
-        int[] arr1 = new int[4];
-//        int arr2[] = new int[10];
-        arr1[0]=12;
+//        int[] arr1 = new int[4];
+////        int arr2[] = new int[10];
+//        arr1[0]=12;
+//
+//        System.out.println(Arrays.toString(arr1));
 
-        System.out.println(Arrays.toString(arr1));
+
+//        String text = "Java Mastery Academy";
 
 
     }

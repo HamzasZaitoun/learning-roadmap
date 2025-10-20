@@ -6,3 +6,14 @@
  - inner class
  - local class
  - anonymous class
+
+
+
+////
+
+
+String pool:  a special memory region where String objects are stored, when creating a string literal,
+java checks if that string already exists in the pool, if it does,
+it simply returns the reference to the existing string object, if not, a new string object is created and added to the pool.
+ String name = "Hamza"; --> added to the pool
+ String name = new String("Hamza") --> do not add to the pool, direct to the heap.
