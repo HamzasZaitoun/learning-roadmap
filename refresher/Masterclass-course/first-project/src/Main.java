@@ -1,7 +1,6 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args)  {
@@ -40,7 +39,43 @@ public class Main {
 
 //        String text = "Java Mastery Academy";
 
+//
+//        Student s1=new Student("Hamza");
+//        Student s2=new Student("Hazem");
+//        Student s3=new Student("Hakeem");
+//
+//        StudentGroup group = new StudentGroup(Arrays.asList(s1,s2,s3));
+//
+//        for(Student student : group)
+//        {
+//            System.out.println(student.getName());
+//        }
 
+
+//        List<String> arrayList = new ArrayList<String>();
+//
+//        System.out.println(arrayList.size());
+
+//        LinkedList<String> names = new LinkedList<>();
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        names.add("Hamza");
+//        System.out.println(names.get(3));
+
+
+
+        Queue<Integer> pages = new PriorityQueue<>(Collections.reverseOrder());
+        pages.offer(10);
+        pages.offer(13);
+        pages.offer(9);
+        pages.offer(88);
+        System.out.println(pages);
     }
     public static void logiValidation(String name, String password) throws userLoginCustomException
     {
