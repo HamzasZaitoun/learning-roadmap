@@ -70,12 +70,21 @@ public class Main {
 
 
 
-        Queue<Integer> pages = new PriorityQueue<>(Collections.reverseOrder());
-        pages.offer(10);
-        pages.offer(13);
-        pages.offer(9);
-        pages.offer(88);
-        System.out.println(pages);
+//        Queue<Integer> pages = new PriorityQueue<>(Collections.reverseOrder());
+//        pages.offer(10);
+//        pages.offer(13);
+//        pages.offer(9);
+//        pages.offer(88);
+//        System.out.println(pages);
+
+
+        SortedSet<String> names = new TreeSet<>();
+        names.add("Abd");
+        names.add("Hamzz");
+        names.add("Hamzz");
+        names.add("ASD");
+        System.out.println(names);
+
     }
     public static void logiValidation(String name, String password) throws userLoginCustomException
     {
