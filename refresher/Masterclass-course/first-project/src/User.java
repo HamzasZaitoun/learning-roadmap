@@ -1,58 +1,41 @@
-public class User {
-    private Long id;
+public class User implements Comparable<User>{
     private String name;
-    private String email;
-    private String mobile;
-    private String[] address;
+    private Integer age;
 
-    public User( String name, String email, String mobile, String[] address) {
 
+    public User(String name, Integer age) {
         this.name = name;
-        this.email = email;
-        this.mobile = mobile;
-        this.address = address;
+        this.age = age;
     }
 
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public void setAddress(String[] address) {
-        this.address = address;
-    }
-
-    public Long getId() {
-        return id;
-    }
 
     public String getName() {
         return name;
     }
 
-    public String getEmail() {
-        return email;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getMobile() {
-        return mobile;
+    public Integer getAge() {
+        return age;
     }
 
-    public String[] getAddress() {
-        return address;
+    public void setAge(Integer age) {
+        this.age = age;
     }
+
 
     @Override
     public String toString() {
-        return super.toString();
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return o.getAge().compareTo(this.age);
     }
 }

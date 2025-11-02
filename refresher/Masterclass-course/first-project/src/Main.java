@@ -27,7 +27,7 @@ public class Main {
 ////        logiValidation(username,password);
 
 
-//        User user = new User("Hamza","Hamza@gail.com","079252525",new String[]{"Amman, Jordan","Salalah, Oman"} );
+//        User2 user = new User2("Hamza","Hamza@gail.com","079252525",new String[]{"Amman, Jordan","Salalah, Oman"} );
 //        System.out.println(user);
 
 //        int[] arr1 = new int[4];
@@ -77,13 +77,31 @@ public class Main {
 //        pages.offer(88);
 //        System.out.println(pages);
 
+//
+//        SortedSet<String> names = new TreeSet<>();
+//        names.add("Abd");
+//        names.add("Hamzz");
+//        names.add("Hamzz");
+//        names.add("ASD");
+//        var x = names.last();
+//        System.out.println(names);
 
-        SortedSet<String> names = new TreeSet<>();
-        names.add("Abd");
-        names.add("Hamzz");
-        names.add("Hamzz");
-        names.add("ASD");
-        System.out.println(names);
+
+//
+//        Map<String,String> map = new Hashtable<>();
+//        SortedMap<String,String> map = new TreeMap<>();
+//        map.put("username","admin");
+//        map.put("password","password");
+//        map.put("address","Amman");
+//        System.out.println(map);
+//        map.put("username","admin2");
+//        map.remove("address");
+//        System.out.println(map);
+//        boolean hasUsername=map.containsKey("username");
+//        boolean hasAdderss=map.containsKey("address");
+//        System.out.println("has user name: {"+hasUsername + "} has address: {" + hasAdderss +"} ");
+
+
 
     }
     public static void logiValidation(String name, String password) throws userLoginCustomException
