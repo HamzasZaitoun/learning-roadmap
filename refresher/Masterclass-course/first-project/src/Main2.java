@@ -84,10 +84,11 @@ public class Main2 {
 //        EnumSet<Days> workingDays= EnumSet.range(Days.SUNDAY,Days.THURSDAY);
 ////        alldays.add(Days.MONDAY);
 //        System.out.println(workingDays);
-
-        EnumMap<Days,String> map = new EnumMap<>(Days.class);
-        map.put(Days.FRIDAY,"OFF DAY");
-        map.put(Days.SUNDAY,"WORKING DAY");
+//
+//        EnumMap<Days,String> map = new EnumMap<>(Days.class);
+//        map.put(Days.FRIDAY,"OFF DAY");
+//        map.put(Days.SUNDAY,"WORKING DAY");
+//
 
 
 

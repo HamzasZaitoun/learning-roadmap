@@ -102,7 +102,6 @@ public class Main {
 //        System.out.println("has user name: {"+hasUsername + "} has address: {" + hasAdderss +"} ");
 
 
-
     }
     public static void logiValidation(String name, String password) throws userLoginCustomException
     {
