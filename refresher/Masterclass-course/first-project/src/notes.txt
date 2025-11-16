@@ -17,3 +17,12 @@ java checks if that string already exists in the pool, if it does,
 it simply returns the reference to the existing string object, if not, a new string object is created and added to the pool.
  String name = "Hamza"; --> added to the pool
  String name = new String("Hamza") --> do not add to the pool, direct to the heap.
+
+
+
+
+
+serialization: converting an object into a byte stream to save to a  file or send over network.
+deserialization: converting the byte stream back into  the original object.
+
+Marker interface: interface that contains no methods or fields, its purpose is to mark or tag a class to indicate that it processes some property or should be treated in a special way .

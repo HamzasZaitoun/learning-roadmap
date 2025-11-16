@@ -1,8 +1,10 @@
 import java.io.*;
 import java.util.Arrays;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Main4 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 //        String filePath="test.txt";
 //        try {
@@ -86,7 +88,7 @@ public class Main4 {
 //        outputStream.flush();
 //        outputStream.close();
 
-        String path = "myFolder\\file.txt";
+            String path = "myFolder\\file.txt";
 
 //        FileWriter fileWriter = new FileWriter(path, true);
 //        fileWriter.write("hi there, im \n");
@@ -105,17 +107,45 @@ public class Main4 {
 //        BufferedReader reader = new BufferedReader(new FileReader(path));
 
 
+//
+//        PrintWriter writer = new PrintWriter(path);
+//        writer.println("java mastery ");
+//        writer.println("hi ");
+//        writer.println(98);
+//        writer.println(true);
+//        writer.println('h');
+//        writer.flush();
+//        writer.close();
 
-        PrintWriter writer = new PrintWriter(path);
-        writer.println("java mastery ");
-        writer.println("hi ");
-        writer.println(98);
-        writer.println(true);
-        writer.println('h');
-        writer.flush();
-        writer.close();
+//
+//            File file = new File(path);
+//            Scanner scanner = new Scanner(file);
+//            scanner.useDelimiter(",");
+//              scanner.useDelimiter(Pattern.compile("\\D+"));
+//
+//            while (scanner.hasNext())
+//            {
+//                    System.out.println(scanner.next().trim());
+//            }
 
 
+
+//        DBOperation operation = new DBOperation();
+//        operation.save(new Product("iphone","1100" ));
+//        operation.save(new Payment("visa", 5000d  ));
+
+
+        //serilize
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("audit.txt"));
+        outputStream.writeObject((new Payment("visa", 5000.54d)));
+        outputStream.flush();
+        outputStream.close();
+
+        //deserilize
+        ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("audit.txt"));
+        Payment payment = (Payment) inputStream.readObject();
+        System.out.println(payment);
 
     }
+
 }

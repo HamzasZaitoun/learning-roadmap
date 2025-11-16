@@ -1,5 +1,3 @@
-java mastery 
-hi 
-98
-true
-h
+Hamza, Amman, 0795295956
+Osama, Muscat, 0795295956
+Saad , Maan, 0795295956
