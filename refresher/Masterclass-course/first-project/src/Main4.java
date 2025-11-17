@@ -135,13 +135,13 @@ public class Main4 {
 //        operation.save(new Payment("visa", 5000d  ));
 
 
-        //serilize
+        //serilize writing
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("audit.txt"));
         outputStream.writeObject((new Payment("visa", 5000.54d)));
         outputStream.flush();
         outputStream.close();
 
-        //deserilize
+        //deserilize reading
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("audit.txt"));
         Payment payment = (Payment) inputStream.readObject();
         System.out.println(payment);
