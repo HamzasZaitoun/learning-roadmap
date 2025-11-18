@@ -1,6 +1,9 @@
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Main5 {
+    private static Logger logger = Logger.getLogger(Main5.class.getName());
+
     public static void main(String[] args) {
 
 //       Utils.printArray(new String[]{"abd","hamza","Hamed"});
@@ -15,11 +18,11 @@ public class Main5 {
 //
 
 
-
         Utils<String> names = new Utils<>();
         names.add("Hamza");
         names.add("ahmad");
-        names.add("ibrahem");
+        names.add("Ibraheem");
+        logger.info("arraylist!" + names.getNames());
         System.out.println(names.getNames());
 
     }
