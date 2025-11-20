@@ -137,7 +137,7 @@ public class Main4 {
 
         //serilize writing
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("audit.txt"));
-        outputStream.writeObject((new Payment("visa", 5000.54d)));
+        outputStream.writeObject((new Payment(PaymentType.VISA, 5000.54d)));
         outputStream.flush();
         outputStream.close();
 

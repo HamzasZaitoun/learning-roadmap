@@ -1,28 +1,40 @@
 import java.io.Serializable;
 
 public class Payment implements Serializable {
-    private String type;
+    private PaymentType type;
     private Double amount;
 
-    public String getType() {
-        return type;
+
+    public Payment(PaymentType type, Double amount) {
+        this.type = type;
+        this.amount = amount;
     }
 
-    public void setType(String type) {
-        this.type = type;
+
+    public PaymentType getType() {
+        return type;
     }
 
     public Double getAmount() {
         return amount;
     }
 
+    public void setType(PaymentType type) {
+        this.type = type;
+    }
+
+
+
     public void setAmount(Double amount) {
         this.amount = amount;
     }
 
-    public Payment(String type, Double amount) {
-        this.type = type;
-        this.amount = amount;
+    public double getFees() {
+        return switch (this.type) {
+            case VISA -> amount * 0.15d;
+            case PAYPAL -> amount * 0.20d;
+            default -> 0.0d;
+        };
     }
 
     @Override
